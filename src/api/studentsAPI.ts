@@ -2,7 +2,7 @@ import type SrudentsInterface from '@/types/StudentsInterface';
 
 export const getStudentsApi = async (): Promise<SrudentsInterface[]> => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API}groups`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API}students`);
 
     if (!response.ok) {
       throw new Error(`Ошибка HTTP: ${response.status}${response.statusText}`);
