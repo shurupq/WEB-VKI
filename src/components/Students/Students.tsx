@@ -4,6 +4,7 @@ import useStudents from '@/hooks/useStudents';
 import type StudentInterface from '@/types/StudentInterface';
 import styles from './Students.module.scss';
 import Student from './Student/Student';
+<<<<<<< HEAD
 import { useEffect } from 'react';
 
 const Students = (): React.ReactElement => {
@@ -20,6 +21,18 @@ const Students = (): React.ReactElement => {
 
   if (isLoading) return <div className={styles.Student}>Загрузка…</div>;
   if (isError)   return <div className={styles.Student}>Ошибка загрузки студентов</div>;
+=======
+
+const Students = (): React.ReactElement => {
+  const { students, deleteStudentMutate } = useStudents();
+  
+const onDeleteHandler = (id: number) => {
+  console.log(id);
+  deleteStudentMutate(id);
+  
+}
+ 
+>>>>>>> dc1f74f63f03d6ddd41095fe0849c89c0d708ac6
 
   return (
     <div className={styles.Student}>
